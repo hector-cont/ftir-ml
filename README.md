@@ -1,68 +1,40 @@
-\# FTIR-OH Coníferas: PCA + 2D-COS + Deconvolución (Python)
+# ftir-ml
 
+Repositorio para análisis reproducible de espectros FTIR (maderas, región O–H) mediante una secuencia de trabajo basada en:
 
+- Pretratamiento (recorte de rango, SNV y transformaciones asociadas)
+- PCA (cargas, scores, contribuciones por número de onda y mapas de calor)
+- 2D-COS (mapas sincrónicos y asincrónicos)
+- Deconvolución (cuando aplique)
 
-Este repositorio contiene scripts y módulos en Python para el análisis reproducible de espectros FTIR de maderas de coníferas, con enfoque en la región de estiramiento O–H (típicamente 3700–3000 cm⁻¹) mediante una secuencia metodológica:
+El repositorio está organizado en:
+- `scripts/` para ejecutar el flujo de trabajo (programas “corribles”).
+- `src/` para funciones reutilizables (módulos).
+- `docs/` para notas metodológicas y documentación.
+- `data/sample/` para datos mínimos de ejemplo (sin datos sensibles).
+- `results/` para figuras/tablas generadas.
 
+## Requisitos
 
+Python 3.10+ (recomendado 3.12) y librerías típicas: `numpy`, `pandas`, `matplotlib`, `scikit-learn`.
+Las dependencias quedan documentadas en `environment/` (se agregará conforme se estabilice el entorno).
 
-1\) Conversión de archivos (PerkinElmer `.sp` y/o JCAMP-DX `.jdx/.dx`) a CSV  
+## Uso general
 
-2\) Pretratamiento (recorte de rango, SNV y/o transformaciones según corresponda)  
+1. Coloque datos (si aplica) en `data/raw/` (no versionado).
+2. Ejecute scripts desde `scripts/` en el orden indicado por el flujo.
+3. Los resultados se guardan en `results/`.
 
-3\) Análisis de Componentes Principales (PCA) y extracción de contribuciones por número de onda  
+## Reproducibilidad
 
-4\) Correlación bidimensional (2D-COS) sincrónica y asincrónica  
+- Versiones fijas de dependencias.
+- Salidas guardadas en rutas consistentes.
+- Scripts deterministas cuando aplica.
 
-5\) Deconvolución espectral (cuando aplique al flujo de trabajo)
+## Citación
 
+Use el archivo `CITATION.cff` para citar este repositorio.
 
+## Autor
 
-> Nota: el repositorio está diseñado para ser usado como \*\*flujo de trabajo\*\* (scripts) y como \*\*código reutilizable\*\* (módulos en `src/`).
-
-
-
----
-
-
-
-\## Requisitos
-
-
-
-\- Python (recomendado: 3.10+ o 3.12)
-
-\- Paquetes principales: `numpy`, `pandas`, `matplotlib`, `scikit-learn`
-
-\- Lectura de espectros:
-
-&nbsp; - PerkinElmer `.sp`: requiere una librería de lectura compatible (según su entorno)
-
-&nbsp; - JCAMP-DX: lector compatible (`.jdx/.dx`)
-
-
-
-Las dependencias se documentan en:
-
-\- `environment/conda-env.yml` (recomendado)
-
-\- `environment/requirements.txt` (alternativa)
-
-
-
----
-
-
-
-\## Instalación (conda)
-
-
-
-```bash
-
-conda env create -f environment/conda-env.yml
-
-conda activate ftir-oh
-
-
-
+Héctor J. Contreras Q.
