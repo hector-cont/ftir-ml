@@ -1,7 +1,6 @@
-# -*- coding: utf-8 -*-
 """
-GRÁFICA DE ESPECTROS FTIR DESDE ARCHIVOS .sp (Perkin-Elmer)
-===========================================================
+01_grafica_espectros_ftir_sp.py
+================================
 
 Este programa:
 
@@ -16,7 +15,8 @@ NOTAS
   * El eje X se muestra en número de onda (cm⁻1) y se invierte
     (forma típica de FTIR: 4000 → 700 cm⁻1, por ejemplo).
 
-Héctor J. Contreras Q.
+Autor: Héctor J. Contreras Q.
+Repositorio: https://github.com/hector-cont/ftir-ml
 Diciembre de 2025.
 """
 
@@ -104,3 +104,4 @@ if __name__ == "__main__":
         patron=patron_archivos,
         titulo=titulo_grafica
     )
+
