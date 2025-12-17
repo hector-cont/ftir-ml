@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+*.so
+*.egg-info/
+dist/
+build/
+.ipynb_checkpoints/
+
+# Entornos
+.venv/
+venv/
+ENV/
+env/
+conda-env/
+*.conda
+*.env
+
+# IDEs
+.vscode/
+.spyderproject
+.spyproject
+.idea/
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Resultados y datos (NO versionar)
+data/raw/
+data/processed/
+results/
+
+# Permitir ejemplos mínimos
+!data/sample/
+!results/figures/
+!results/tables/
