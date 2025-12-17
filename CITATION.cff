@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "Si usa este repositorio, por favor cítelo."
+title: "ftir-ml"
+type: software
+authors:
+  - family-names: "Contreras"
+    given-names: "Héctor J."
+repository-code: "https://github.com/hector-cont/ftir-ml"
+license: MIT
